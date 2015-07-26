@@ -6,7 +6,10 @@ The run_analysis.R script does the following:
 - 1. It loads the X_train.txt and X_test.txt files, names their columns using the names given in the features.txt file, and merges them into a data frame called mergedSet by rowbinding them. 
 - 2. It then extracts only the measurements in mergedSet on mean and standard deviation. To do this, it uses the grep function to find the indices of columns with the string "mean" or "std". It then re-defines mergedSet accordingly.
 - 3. To make the variable names of the mergedSet more readable, the script then eliminates the dashes in the names.
-- 4. Next, the script creates a column for the activities. It draws the activity data from the y_train.txt and the y_test.txt files, recasting them into a factor with six levels each of which corresponds to one of the six activities. Finally, the script column binds this factor variable with mergetSet.
-- 5. Similarly, the script then creates a factor variable for subject id and column binds it to mergedSet.
+- 4. Next, the script creates a column for the activities. It draws the activity data from the y_train.txt and the y_test.txt files, recasting them into a factor with six levels each of which corresponds to one of the six activities. Finally, the script column binds this factor variable with mergedSet.
+- 5. Similarly, the script then creates a factor variable for subject id and column binds it with mergedSet.
+- 6. Finally, the script creates a second, tidy data set called Tidy and saves it to a file called "Tidy" in the working directory. For each subject and each activity, Tidy shows the average of each measurement. To create Tidy, the script calls the aggregate function on mergedSet with suitable agruments. 
+- **Codebook.md** This file describles the variables and the data.
+- **README.md** The README file for the this repo.
 
 
